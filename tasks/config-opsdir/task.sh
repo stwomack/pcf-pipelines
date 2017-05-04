@@ -73,22 +73,6 @@ NETWORK_CONFIGURATION=$(cat <<-EOF
           ]
         }
       ]
-    },
-    {
-      "name": "$DEPLOYMENT_NETWORK_NAME",
-      "service_network": false,
-      "subnets": [
-        {
-          "iaas_identifier": "$DEPLOYMENT_VCENTER_NETWORK",
-          "cidr": "$DEPLOYMENT_NW_CIDR",
-          "reserved_ip_ranges": "$DEPLOYMENT_EXCLUDED_RANGE",
-          "dns": "$DEPLOYMENT_NW_DNS",
-          "gateway": "$DEPLOYMENT_NW_GATEWAY",
-          "availability_zone_names": [
-            $DEPLOYMENT_AZS
-          ]
-        }
-      ]
     }
   ]
 }

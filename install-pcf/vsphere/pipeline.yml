@@ -30,7 +30,7 @@ resources:
 - name: pcf-pipelines
   type: git
   source:
-    uri: https://github.com/pivotal-cf/pcf-pipelines.git
+    uri: https://github.com/stwomack/pcf-pipelines.git
     branch: master
     username: {{github_token}}
 
