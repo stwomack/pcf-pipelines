@@ -89,38 +89,6 @@ NETWORK_CONFIGURATION=$(cat <<-EOF
           ]
         }
       ]
-    },
-    {
-      "name": "$SERVICES_NETWORK_NAME",
-      "service_network": true,
-      "subnets": [
-        {
-          "iaas_identifier": "$SERVICES_VCENTER_NETWORK",
-          "cidr": "$SERVICES_NW_CIDR",
-          "reserved_ip_ranges": "$SERVICES_EXCLUDED_RANGE",
-          "dns": "$SERVICES_NW_DNS",
-          "gateway": "$SERVICES_NW_GATEWAY",
-          "availability_zone_names": [
-            $SERVICES_AZS
-          ]
-        }
-      ]
-    },
-    {
-      "name": "$DYNAMIC_SERVICES_NETWORK_NAME",
-      "service_network": true,
-      "subnets": [
-        {
-          "iaas_identifier": "$DYNAMIC_SERVICES_VCENTER_NETWORK",
-          "cidr": "$DYNAMIC_SERVICES_NW_CIDR",
-          "reserved_ip_ranges": "$DYNAMIC_SERVICES_EXCLUDED_RANGE",
-          "dns": "$DYNAMIC_SERVICES_NW_DNS",
-          "gateway": "$DYNAMIC_SERVICES_NW_GATEWAY",
-          "availability_zone_names": [
-            $DYNAMIC_SERVICES_AZS
-          ]
-        }
-      ]
     }
   ]
 }
